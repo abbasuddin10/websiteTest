@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family:monospace;
+}
+div{
+    background: rgb(99, 101, 201);
+    height: 80px;
+    width: 100%;
+}
+label.afrazpoint{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding:  100px;
+    font-weight: bold;
+   font-family: inherit;
+}
+div ul{
+   float: right;
+    margin-right: 20px;
+}
+div ul li{
+   display: inline-block;
+   line-height: 80px;
+   margin:0 5px;
+}
+div ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+a.active, a.hover{
+    background-color: rgb(114, 91, 141);
+    transition: cubic-bezier(1, 0, 0, 1);
+}
+.checkbatton{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+   display: none;
+}
+#check{
+   display: none;
+}
+@media(max-width:952px){
+label.afeazpoint{
+    font-size: 30px;
+    padding-left: 50px;
+    
+}
+div ul li a{
+    font-size: 16px;
+}
+}
+@media(max-width:858px){
+    .checkbatton{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: 0;
+        text-align: center;
+    }
+    div ul li{
+        display: block;
+    }
+    div ul li {
+        font-size: 20px;
+    }
+    A:hover,A.active{
+        background: none;
+        color: rgb(245, 245, 245);
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+}
+section{
+    background: url(logo.jpg) no-repeat;
+    background-size:cover ;
+    height: calc(100vh - 80px);
+}
